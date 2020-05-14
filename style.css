@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  background: #35365e;
 }
 
 .box {
@@ -20,12 +21,57 @@ body {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background: red;
+   perspective: 1000px;
 }
 
-.main img {
+.card {
+   width: 400px;
+   height: 600px;
+   position: absolute;
+   left: 50%;
+   transform-origin: left center;
+   transform: translate(-50%) rotateY(0deg);
+   transition: transform 500ms linear;
+   background: #fff8d6;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+}
+
+.card2 {
+   width: 397px;
+   height: 600px;
+   position: absolute;
+   left: 50%;
+   transform-origin: left center;
+   transform: translate(-50%) translateZ(-0.01px) rotateY(0deg);
+   transition: transform 500ms linear;
+   background: #fff8d6;
+   border-left: 3px solid #faf5cd;
+}
+
+.card img {
    position: relative;
    left: 50%;
+   transform: translate(-50%);
+   height: 300px;
+   bottom: 20px;
+}
+
+.main:hover .card {
+   transform: translate(-50%) rotateY(-180deg);
+}
+
+.main:hover .card2 {
+   transform: translate(-50%) translateZ(-0.01px) rotateY(-180deg);
+}
+
+.cardback {
+   width: 350px;
+   height: 550px;
+   padding: 25px;
+   position: absolute;
+   left: 50%;
+   background: #fff8d6;
    transform: translate(-50%);
 }
 
@@ -33,6 +79,12 @@ h1 {
    text-align: center;
    font-size: 64px;
    font-family: 'Pacifico', cursive;
+   color: #0b00a3;
+}
+
+p {
+   font-family: 'Allura', cursive;
+   font-size: 24px;
 }
 
 @keyframes rise {
