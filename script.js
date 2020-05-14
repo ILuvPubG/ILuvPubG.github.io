@@ -1,4 +1,24 @@
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+
 var num = 20;
+var images = ["test.png","tomato.png","bday.png","ha.png","poop.png"];
+var im = [];
+
+for (var i = 0; i < num; i++) {
+   im.push(images[Math.floor(i*(images.length/num))]);
+}
+
+im = shuffle(im);
 
 for (var i = 0; i < num; i++) {
    var n = document.createElement("div");
@@ -9,7 +29,7 @@ for (var i = 0; i < num; i++) {
    n.style.animationDuration = (Math.random() * 2000)+4000+"ms";
    n.style.width = size+"px";
    n.style.height = size+"px";
-   n.style.background = 'url("img/test.png")';
+   n.style.background = 'url("img/'+im[i]+'")';
    n.style.backgroundSize = "contain";
    document.body.appendChild(n);
 }
