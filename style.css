@@ -1,6 +1,8 @@
 body {
   overflow: hidden;
-  background: #008aed;
+  background: #1e5878;
+  padding: 0;
+  margin: 0;
 }
 
 .box {
