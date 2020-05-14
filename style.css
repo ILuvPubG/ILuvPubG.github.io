@@ -1,0 +1,20 @@
+body {
+  overflow: hidden;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  position: absolute;
+  bottom: -10%;
+  transform: translate(-50%, 50%);
+  animation: rise 5s ease-in infinite;
+}
+
+@keyframes rise {
+  0% {opacity: 0; bottom: -10%;}
+  5% {opacity: .8;}
+  80% {opacity: .8;}
+  100% {opacity: 0; bottom: 110%;}
+}
