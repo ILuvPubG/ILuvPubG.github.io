@@ -4,8 +4,6 @@ body {
 }
 
 .box {
-  width: 100px;
-  height: 100px;
   background: #000;
   background-size: contain;
   position: absolute;
@@ -36,7 +34,7 @@ body {
    transform-origin: left center;
    transform: translate(-50%) rotateY(0deg);
    transition: transform 500ms linear;
-   background: #fff8d6;
+   background: linear-gradient(#fff8d655,#fff8d655), url("img/paper.png"), linear-gradient(#fff8d6,#fff8d6);
    -webkit-backface-visibility: hidden;
    backface-visibility: hidden;
 }
@@ -49,8 +47,8 @@ body {
    transform-origin: left center;
    transform: translate(-50%) translateZ(-0.01px) rotateY(0deg);
    transition: transform 500ms linear;
-   background: #fff8d6;
-   border-left: 3px solid #faf5cd;
+   background: linear-gradient(#fff8d655,#fff8d655), url("img/paper.png"), linear-gradient(#fff8d6,#fff8d6);
+   border-left: 3px solid #e9e4bc;
 }
 
 .card img {
@@ -80,12 +78,12 @@ body {
    padding: 25px;
    position: absolute;
    left: 50%;
-   background: #fff8d6;
+   background: linear-gradient(#fff8d655,#fff8d655), url("img/paper.png"), linear-gradient(#fff8d6,#fff8d6);
    transform: translate(-50%);
 }
 
 .card2 img {
-   width: 250px;
+   width: 350px;
    position: relative;
    top: 50%;
    left: 50%;
@@ -112,7 +110,7 @@ p {
 
 @keyframes rise {
   0% {opacity: 0; bottom: -10%;}
-  5% {opacity: .8;}
-  80% {opacity: .8;}
+  5% {opacity: 1;}
+  80% {opacity: 1;}
   100% {opacity: 0; bottom: 110%;}
 }

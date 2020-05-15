@@ -15,7 +15,7 @@ function flip() {
 }
 
 var num = 30;
-var images = ["test.png","tomato.png","bday.png","ha.png","poop.png","balloon.png"];
+var images = ["img/1.JPG","img/2.JPG","img/3.JPG","img/4.JPG","img/5.JPG","img/6.JPG","img/7.JPG","img/8.JPG","img/9.JPG","img/10.JPG","img/11.JPG","img/12.JPG","img/13.JPG","img/14.JPG","img/cake.JPG"];
 var im = [];
 
 for (var i = 0; i < num; i++) {
@@ -25,15 +25,16 @@ for (var i = 0; i < num; i++) {
 im = shuffle(im);
 
 for (var i = 0; i < num; i++) {
-   var n = document.createElement("div");
+   var n = document.createElement("img");
+   n.src = im[i];
    n.classList.add("box");
    var size = Math.floor(Math.random()*100)+100;
    n.style.left = ((i*(100/num))+(100/(2*num)))+"%";
    n.style.animationDelay = (Math.random() * 5000)+"ms";
    n.style.animationDuration = (Math.random() * 2000)+4000+"ms";
    n.style.width = size+"px";
-   n.style.height = size+"px";
-   n.style.background = 'url("img/'+im[i]+'")';
+   n.style.height = "auto";
+   //n.style.background = 'url("img/'+im[i]+'")';
    n.style.backgroundSize = "contain";
    document.body.appendChild(n);
 }
