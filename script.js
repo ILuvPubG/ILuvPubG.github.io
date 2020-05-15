@@ -10,8 +10,12 @@ function shuffle(array) {
   return array;
 }
 
-var num = 20;
-var images = ["test.png","tomato.png","bday.png","ha.png","poop.png"];
+function flip() {
+   document.getElementsByClassName("main")[0].classList.add("opened");
+}
+
+var num = 50;
+var images = ["test.png","tomato.png","bday.png","ha.png","poop.png","balloon.png"];
 var im = [];
 
 for (var i = 0; i < num; i++) {

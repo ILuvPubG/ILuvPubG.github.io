@@ -1,8 +1,6 @@
 body {
   overflow: hidden;
   background: #1e5878;
-  padding: 0;
-  margin: 0;
 }
 
 .box {
@@ -12,18 +10,22 @@ body {
   background-size: contain;
   position: absolute;
   bottom: -10%;
+  opacity: 0;
+  z-index: -2;
   transform: translate(-50%, 50%);
-  animation: rise 5s ease-in infinite;
+  animation: rise 5s linear infinite;
 }
 
 .main {
-   width: 800px;
+   width: 400px;
    height: 600px;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    perspective: 1000px;
+   transition: transform 500ms ease-in-out;
+   cursor: pointer;
 }
 
 .card {
@@ -59,12 +61,17 @@ body {
    bottom: 20px;
 }
 
-.main:hover .card {
+.main.opened .card {
    transform: translate(-50%) rotateY(-180deg);
 }
 
-.main:hover .card2 {
+.main.opened .card2 {
    transform: translate(-50%) translateZ(-0.01px) rotateY(-180deg);
+}
+
+.opened {
+   transform: translate(calc(-50% + 200px), -50%);
+   cursor: default;
 }
 
 .cardback {
@@ -77,6 +84,20 @@ body {
    transform: translate(-50%);
 }
 
+.card2 img {
+   width: 250px;
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%) scaleX(-1);
+}
+
+.sign {
+   position: absolute;
+   bottom: 25px;
+   right: 50px;
+}
+
 h1 {
    text-align: center;
    font-size: 64px;
@@ -86,7 +107,7 @@ h1 {
 
 p {
    font-family: 'Allura', cursive;
-   font-size: 24px;
+   font-size: 28px;
 }
 
 @keyframes rise {
