@@ -15,7 +15,7 @@ function flip() {
 }
 
 var num = 30;
-var images = ["img/1.JPG","img/2.JPG","img/3.JPG","img/4.JPG","img/5.JPG","img/6.JPG","img/7.JPG","img/8.JPG","img/9.JPG","img/10.JPG","img/11.JPG","img/12.JPG","img/13.JPG","img/14.JPG","img/cake.JPG"];
+var images = ["img/1.JPG","img/2.JPG","img/3.JPG","img/4.JPG","img/5.JPG","img/6.JPG","img/7.JPG","img/8.JPG","img/9.JPG","img/10.jpg","img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/cake.JPG"];
 var im = [];
 
 for (var i = 0; i < num; i++) {
