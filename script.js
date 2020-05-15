@@ -14,7 +14,7 @@ function flip() {
    document.getElementsByClassName("main")[0].classList.add("opened");
 }
 
-var num = 50;
+var num = 30;
 var images = ["test.png","tomato.png","bday.png","ha.png","poop.png","balloon.png"];
 var im = [];
 
